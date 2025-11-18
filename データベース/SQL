@@ -100,4 +100,23 @@
 
 ===========================
 
-以降 Notion、スプシで練習
+・SELECT
+  AS
+  DISTINCT
+・WHERE
+  AND
+  OR
+  BETWEEN
+  IN, NOT IN
+  LIKE
+  IS NULL, IS NOT NULL
+・LIMIT
+・ORDER BY
+  ASC, DESC
+
+
+■ポイント
+  基本シングルクォートで書く
+  SELECT等の命令文(予約語)は大文字でかき、テーブル/カラム名などは小文字で
+    (小文字の命令文でも動くが、可読性とミスをケア)
+  予約語の後は改行する
