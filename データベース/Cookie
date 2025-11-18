@@ -1,0 +1,31 @@
+CookieとCachesの違い
+
+Cookie = ユーザの情報を保持
+Caches = HTMLなどページの情報を保持
+
+=======================
+
+JS Cookieの操作
+
+  document.cookie = "key=value";
+
+  ソースコード
+----------------------
+const cookies = document.cookie;
+const array = cookies.split(';');
+
+array.forEach(function(value) {
+  const content = value.split('=');
+  console.log(content[1]); // valueを取得
+})
+-----------------------
+
+Cookieの有効期限設定
+  // max-age 1時間後に消える
+  document.cookie = "user=Tarou; max-age=3600";
+
+  // expires　2021/11/30（月） 20:00に消える
+  document.cookie = "user=Tarou; expires=Mon, 30 Nov 2021 20:00:00 GMT";
+
+Cookieの削除
+  ↑の時間を0にする or 過去の日付にする
