@@ -11,12 +11,12 @@ JS Cookieの操作
 
   ソースコード
 ----------------------
-const cookies = document.cookie;
-const array = cookies.split(';');
+const cookies = document.cookie; // cookieをひとつの文字列として取得
+const array = cookies.split(';'); // cookies文字列を;で区切って配列として取得
 
-array.forEach(function(value) {
-  const content = value.split('=');
-  console.log(content[1]); // valueを取得
+array.forEach(function(value) { // 繰り返し処理実行,引数にvalue
+  const content = value.split('='); // value = :で区切った要素(key=value)を=で区切って配列として取得
+  console.log(content[1]); // [key, value]の配列からvalueを取得
 })
 -----------------------
 
@@ -29,3 +29,48 @@ Cookieの有効期限設定
 
 Cookieの削除
   ↑の時間を0にする or 過去の日付にする
+
+=======================
+
+js-cookie
+
+ ・コマンドラインでライブラリの導入(プロジェクトのディレクトリで)
+  npm
+    npm i js-cookie
+
+  または
+
+  yarn
+    yarn add js-cookie
+
+ ・インポート
+    import Cookies from 'js-cookie';
+
+  cookieの読み込み
+    Cookies.get('key') // 指定したキーの値を取得
+    Cookies.get() // すべてのcookieを取得
+
+  cookieの書き込み
+      Cookie.set('key','value');
+    // 14日後に消える
+      Cookies.set('key', 'value', {expires: 14}); 
+    // ユーザーの使用言語を日本語に指定
+      Cookies.set('locale', 'ja-JP'); 
+
+  cookieの削除
+    Cookies.remove('key')
+
+  http(SSL/TLS)通信時のみにcookieを送信
+    Cookies.set('key', 'value', {secure: true});
+
+
+
+
+
+
+
+
+
+
+
+
