@@ -1,0 +1,37 @@
+# LocalStorageとは
+  WebStorageのひとつ
+  JavaScriptを用いてクライアントサイドにデータを半永久的に保持
+
+  cookieとの違い
+    cookie
+      保存容量が最大4KB
+      リクエストの度にサーバーへ値を送信
+      任意に有効期限を設定
+      フロントエンド/バックエンドで利用可
+
+    LocalStorage
+      保存容量はブラウザ次第(5MB～10MB)
+      サーバーへ値を送信しない
+      無期限
+      フロントエンドのみ利用可
+
+    注意点
+      データ構造を考慮せずなんでもデータを保持すると無駄が多くなる
+      誤ったデータが保存された場合、クライアント側なので修正もむずかしくなる
+      => 短期間ならむいてんぜ
+
+=====================
+
+  データの保存
+    localstorage.setItem('key', 'value'); //　関数を使う場合
+    localstrage.savekey = '保存する値'; // プロパティとして保存する場合
+
+　データの取得
+    const value = localstorage.getItem('key'); // 関数を使う場合
+    const value = localstorage.savekey; // プロパティを取得する場合
+
+  データの削除
+    localstorage.removeItem('key');
+
+  LocalStorageを初期化
+    local.storage.clear();
