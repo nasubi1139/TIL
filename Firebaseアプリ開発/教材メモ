@@ -1,0 +1,28 @@
+サンプルコード
+https://github.com/seito-developer/daily-report
+
+日報管理Webアプリ
+「名前、仕事内容、一言コメント」を入力して「報告ボタン」を押すと日時と日報が登録される
+
+・Firebase
+  BaaSのひとつ
+    BaaS･･･Backend as a Service
+           モバイルアプリ等バックエンド機能を代行するサービス
+           https://onetech.jp/blog/why-use-backend-as-a-service-baas-17565
+  => 使用するのはCloud Firestore(NoSQL型)
+
+・Node.js
+  JSをサーバーサイドで実行することを可能にするための実行環境と呼ばれるツール
+  導入することでCLIで動作させたりバックエンド開発が可能に
+
+  できること
+    1.サーバーサイドでの処理を実行できる
+    2.他のサーバーサイド言語のようにCLIで操作できる
+    3.npmが使える
+      npm･･･パッケージ・ライブラリ・フレームワークなどをインストールできるツール
+            「パッケージ管理ツール」
+  インストールして使用(Nodeとnpmのバージョンを確認する)
+
+・Vite(ヴィート)
+  Node.js上で動作するJSの開発を支援するCLIツール
+  https://ja.vitejs.dev/
