@@ -1,8 +1,10 @@
 サンプルコード
 https://github.com/seito-developer/daily-report
 
+
 日報管理Webアプリ
 「名前、仕事内容、一言コメント」を入力して「報告ボタン」を押すと日時と日報が登録される
+
 
 ・Firebase
   BaaSのひとつ
@@ -10,6 +12,7 @@ https://github.com/seito-developer/daily-report
            モバイルアプリ等バックエンド機能を代行するサービス
            https://onetech.jp/blog/why-use-backend-as-a-service-baas-17565
   => 使用するのはCloud Firestore(NoSQL型)
+
 
 ・Node.js
   JSをサーバーサイドで実行することを可能にするための実行環境と呼ばれるツール
@@ -23,6 +26,34 @@ https://github.com/seito-developer/daily-report
             「パッケージ管理ツール」
   インストールして使用(Nodeとnpmのバージョンを確認する)
 
+
 ・Vite(ヴィート)
   Node.js上で動作するJSの開発を支援するCLIツール
   https://ja.vitejs.dev/
+
+
+・Viteセットアップ後のファイルやコマンドの意味
+  node_modules ･･･ npmコマンドでインストールしたモジュールが格納される場所。おさわり厳禁！
+  packafe.json ･･･ 現在のプロジェクトの情報を保存するファイル　詳しくは教材
+  package-lock.json ･･･ より厳格なバージョン管理を行うファイル。↑と一緒に生成更新される。
+  public ･･･ 静的なデータを格納するフォルダ。
+             静的なデータ => 後進性がなくサーバー側で処理が必要ないデータ。画像動画音声データ
+  main.js、counter.js、style.css
+    ･･･デフォルトでindex.hmtlが読み込んでいるファイル。デフォルトではダミーのコードが記載されているが消しても問題ない。
+
+
+・ファイルを分割・結合する際のメリットデメリット
+  これくらいはメモ見なくても頭で想像説明できるように読みなさい
+
+・import/export
+　ファイルを分割してプログラミングしつつ必要な部分だけを他のファイルから参照可能
+
+　ファイルA
+  export const foo = ~~~,(変数、関数、クラス等)
+  もしくは、exportをまとめて記述する => export { foo, bar }
+
+  ファイルB
+　import { foo } from "読み込み先のファイル名"
+
+　サードパーティ製のモジュールをimportする場合
+　npmモジュールは関数等にほぼexportが使われているので、インストール後にimportして使う
