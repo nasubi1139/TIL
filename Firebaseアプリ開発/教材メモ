@@ -57,3 +57,27 @@ https://github.com/seito-developer/daily-report
 
 　サードパーティ製のモジュールをimportする場合
 　npmモジュールは関数等にほぼexportが使われているので、インストール後にimportして使う
+
+・formタグ
+  お問い合わせのほかにサインアップ・ログイン機能を実装する
+  buttonもこの中に入れると送信イベントを取得でき、JSやPHPでサーバーサイドに送ることができる
+
+・inputタグのname属性(必須)
+  サーバーサイドに送る際に必要な属性。
+  key:valueの形で送信される。
+  radioやcheckboxの時はnameの値をそろえるとグループ化できる。
+
+・transition
+===========
+  .button{
+     transition: opacity 0.25s;
+  }
+  .button:hover {
+    opacity: 0.8;
+  }
+===========
+
+・CSS 疑似クラス「:nth-child(数字)」
+  同じ要素が連続している部分で使用する。
+  n番目の要素をセレクト
+  連即した要素のうちn番目だけにCSSを別であてたいけどわざわざclassを分けるのが煩わしい時
