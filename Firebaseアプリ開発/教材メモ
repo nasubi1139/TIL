@@ -1,3 +1,13 @@
+【Firebase　流れ】
+Node.jsインストール => Viteでプロジェクトセットアップ => npmインストール, npm run dev
+=>  コーディング => Firebaseセットアップ(アプリ追加, Firebase SDK, Firebase CLI
+=> データベース作成(アプリにFirebase追加, 
+
+【テストモード　設定変更】
+「構築」=> 「Firebase」、「Cloud Firebase」ページ「ルール」タブ
+timestamp.dateの値を変更
+
+
 サンプルコード
 https://github.com/seito-developer/daily-report
 
@@ -81,3 +91,11 @@ https://github.com/seito-developer/daily-report
   同じ要素が連続している部分で使用する。
   n番目の要素をセレクト
   連即した要素のうちn番目だけにCSSを別であてたいけどわざわざclassを分けるのが煩わしい時
+
+
+・Firebase SDK
+ SDK ･･･ Software Development Kit
+
+
+・npmモジュールをグローバルにインストール
+  -gをつけるとどのディレクトリからもコマンドを実行可能
