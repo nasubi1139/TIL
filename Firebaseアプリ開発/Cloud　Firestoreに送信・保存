@@ -1,1 +1,21 @@
-test
+・const submitData = async (e) => {
+  e.preventDefault();
+
+  ページ遷移とかのイベントキャンセル
+  いつも使ってたやつ
+
+・const formData = new FormData(e.target);
+FormDataオブジェクトのインスタンス化
+FormData => 標準組み込みオブジェクト
+
+・try {
+    const docRef = await addDoc(collection(db, "reports"), {
+      date: new Date(),
+      name: formData.get("name"),
+      work: formData.get("work"),
+      comment: formData.get("comment"),
+    });
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
