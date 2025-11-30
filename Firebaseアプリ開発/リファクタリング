@@ -5,7 +5,8 @@ export, inport忘れず！！！！！！！！！！！！！！！！！！！
   fetchHistoryData(getDocs, collection, db);
 }
 
-ファイル分けしたことでFirebaseモジュールのメソッドがそのまま使えなくなる
+ファイル分けしたことで直接インポートしてない分けた側のファイルで、
+Firebaseモジュールのメソッドがそのまま使えなくなる
 => getDocs等の引数を設定する
 ===============
 ・環境変数
