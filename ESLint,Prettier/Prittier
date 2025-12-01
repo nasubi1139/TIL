@@ -1,0 +1,6 @@
+前提条件：node.jsとnpmが動く環境
+
+npm公式サイト => Pirittier => package.jsonがあるルートディレクトリで実行(IDEでターミナルひらけばいいよ)
+             => eslint-config-prettier => package.jsonがあるルートディレクトリで実行
+ESLintのルールとPrittierのルールが競合することがあるので優先設定をしておく
+
