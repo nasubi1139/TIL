@@ -1,6 +1,6 @@
 前提条件：node.jsとnpmが動く環境
 
-ESLint公式サイト => コマンドコピペ => package.jsonがあるルートディレクトリで実行
+ESLint公式サイト => コマンドコピペ => package.jsonがあるルートディレクトリで実行(IDEでターミナルひらけばいいよ)
 ESLintのルールとPrittierのルールが競合することがあるので優先設定をしておく
 
 To check syntax and find problem
