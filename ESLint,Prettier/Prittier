@@ -2,5 +2,44 @@
 
 npm公式サイト => Pirittier => package.jsonがあるルートディレクトリで実行(IDEでターミナルひらけばいいよ)
              => eslint-config-prettier => package.jsonがあるルートディレクトリで実行
-ESLintのルールとPrittierのルールが競合することがあるので優先設定をしておく
+package.jsonに両方追加されてるはず
 
+「.prittierrc」ファイルを作成
+設定を書く(記事もあるので今度見ておけよ)
+===============
+{
+    "semi": false,
+    "singleQuote": false,
+    "tabWidth": 4,
+    "useTabs": false,
+    "printWidth": 100,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "arrowParens": "avoid",
+    "endOfLine": "lf"
+}
+===============
+[eslint.config.js]
+
+import eslintConfigPrettier from "eslint-config-prettier";
+===============
+[setting.json]
+
+  "files.autoSave": "afterDelay",
+  // 1) ファイル保存時に自動フォーマット
+  "editor.formatOnSave": true,
+  // 2) Prettierをデフォルトフォーマッターに
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // 3) 保存時に ESLint の「fixAll」を実行
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+===============
