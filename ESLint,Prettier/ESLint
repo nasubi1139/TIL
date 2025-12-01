@@ -1,6 +1,7 @@
 前提条件：node.jsとnpmが動く環境
 
 ESLint公式サイト => コマンドコピペ => package.jsonがあるルートディレクトリで実行
+ESLintのルールとPrittierのルールが競合することがあるので優先設定をしておく
 
 To check syntax and find problem
 構文ルール設定するか、と、問題を見つけるか 理由なければ両方選んどこ
